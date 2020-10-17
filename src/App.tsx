@@ -5,6 +5,7 @@ import OrderScreen from './screens/OrderScreen';
 import SelectCartScreen from './screens/SelectCartScreen';
 import theme from './theme';
 import 'typeface-inter';
+import 'typeface-roboto';
 
 const App: React.FC = () => {
   return (

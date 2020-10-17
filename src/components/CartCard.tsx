@@ -1,13 +1,12 @@
 import React from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Card as MuiCard } from '@material-ui/core';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from './Button';
 import Typography from './Typography';
 import { Cart } from '../types';
 import { format } from 'date-fns';
 import PeopleIcon from './icons/PeopleIcon';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles(({ palette }: Theme) =>
   createStyles({
@@ -16,6 +15,7 @@ const useStyles = makeStyles(({ palette }: Theme) =>
       border: `1px solid ${palette.border.main}`,
       minWidth: 275,
       padding: 16,
+      cursor: 'pointer',
     },
     content: {
       padding: '0!important',
@@ -38,9 +38,16 @@ interface Props {
 
 const CartCard: React.FC<Props> = ({ cart }: Props) => {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
-    <MuiCard className={classes.root} variant="outlined">
+    <MuiCard
+      className={classes.root}
+      variant="outlined"
+      onClick={(): void => {
+        history.push(`/order?id=${cart._id}`);
+      }}
+    >
       <CardContent className={classes.content}>
         <Typography variant="h4" gutterBottom>
           {cart.ownerId}&apos;s cart

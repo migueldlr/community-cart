@@ -1,6 +1,7 @@
 type CartType = 'delivery' | 'pickup';
 
 export interface Cart {
+  _id: string;
   ownerId: string;
   storeId: string;
   type: CartType;

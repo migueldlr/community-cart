@@ -1,23 +1,19 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import Grid from '@material-ui/core/Grid';
+import {
+  Grid,
+  Drawer,
+  ListItem,
+  ListItemSecondaryAction,
+} from '@material-ui/core';
 import Typography from '../components/Typography';
 import SearchBar from '../components/SearchBar';
 import Button from '../components/Button';
 import CartSidebar from '../components/CartSidebar';
 import Item from '../components/Item';
 import logo from '../assets/logo.svg';
-import Drawer from '@material-ui/core/Drawer';
 import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import ListItemText from '@material-ui/core/ListItemText';
-import Avatar from '@material-ui/core/Avatar';
 
 const Row = (props: ListChildComponentProps) => {
-  const { data, index, style } = props;
   // const messageToRender = data[index];
 
   return (
@@ -30,8 +26,7 @@ const Row = (props: ListChildComponentProps) => {
   );
 };
 
-interface Props {}
-const OrderScreen: React.FC<Props> = (props: Props) => {
+const OrderScreen: React.FC = () => {
   return (
     <React.Fragment>
       <Drawer anchor="right" variant="permanent">

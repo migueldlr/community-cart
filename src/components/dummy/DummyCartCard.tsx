@@ -5,6 +5,7 @@ const DummyCartCard: React.FC = () => {
   return (
     <CartCard
       cart={{
+        _id: 'test123',
         ownerId: 'abc123',
         type: 'delivery',
         storeId: 'Publix#123',
