@@ -25,6 +25,10 @@ const theme = createMuiTheme({
     border: {
       main: 'rgba(60, 60, 67, 0.13)',
     },
+    text: {
+      primary: '#000000',
+      secondary: 'rgba(60, 60, 67, 0.6)',
+    },
   },
   typography: typographyStyles,
 });

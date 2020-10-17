@@ -4,8 +4,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '../components/Typography';
 import SearchBar from '../components/SearchBar';
 import Button from '../components/Button';
+import CartSidebar from '../components/CartSidebar';
 import Item from '../components/Item';
 import logo from '../assets/logo.svg';
+import Drawer from '@material-ui/core/Drawer';
 import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
@@ -29,9 +31,12 @@ const Row = (props: ListChildComponentProps) => {
 };
 
 interface Props {}
-const Order: React.FC<Props> = (props: Props) => {
+const OrderScreen: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
+      <Drawer anchor="right" variant="permanent">
+        <CartSidebar></CartSidebar>
+      </Drawer>
       <Grid
         container
         direction="column"
@@ -58,7 +63,7 @@ const Order: React.FC<Props> = (props: Props) => {
         </Grid>
         {/* The virtual window of items you can add to cart */}
         <Grid item>
-          <List height={800} itemCount={10} itemSize={35} width={'80vw'}>
+          <List height={800} itemCount={10} itemSize={35} width={'70vw'}>
             {Row}
           </List>
         </Grid>
@@ -67,4 +72,4 @@ const Order: React.FC<Props> = (props: Props) => {
   );
 };
 
-export default Order;
+export default OrderScreen;

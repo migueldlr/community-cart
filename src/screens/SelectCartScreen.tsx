@@ -7,11 +7,12 @@ import Grid from '@material-ui/core/Grid';
 import logo from '../assets/logo.svg';
 import { Redirect, Link } from 'react-router-dom';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import DummyCartCard from '../components/dummy/DummyCartCard';
 // import { db } from '../firebase/index';
 
 interface Props {}
 
-const SelectCart: React.FC<Props> = (props: Props) => {
+const SelectCartScreen: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
       <Grid container direction="column" justify="center" alignItems="center">
@@ -31,24 +32,24 @@ const SelectCart: React.FC<Props> = (props: Props) => {
             spacing={2}
           >
             <Grid item>
-              <Link to="/order">
-                <Card></Card>
+              <Link to="/order" style={{ textDecoration: 'none' }}>
+                <DummyCartCard />
               </Link>
             </Grid>
             <Grid item>
-              <Card></Card>
+              <DummyCartCard />
             </Grid>
             <Grid item>
-              <Card></Card>
+              <DummyCartCard />
             </Grid>
             <Grid item>
-              <Card></Card>
+              <DummyCartCard />
             </Grid>
             <Grid item>
-              <Card></Card>
+              <DummyCartCard />
             </Grid>
             <Grid item>
-              <Card></Card>
+              <DummyCartCard />
             </Grid>
           </Grid>
         </div>
@@ -62,4 +63,4 @@ const SelectCart: React.FC<Props> = (props: Props) => {
   );
 };
 
-export default SelectCart;
+export default SelectCartScreen;

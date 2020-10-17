@@ -19,6 +19,7 @@ export const typographyStyles: Readonly<Record<
   Variant,
   TypographyStyleOptions
 >> = {
+  // Large Title
   h1: {
     fontFamily: 'Inter',
     fontWeight: 'normal',
@@ -27,6 +28,7 @@ export const typographyStyles: Readonly<Record<
     lineHeight: '40px',
     letterSpacing: '-0.05em',
   },
+  // Title 1
   h2: {
     fontFamily: 'Inter',
     fontWeight: 'normal',
@@ -35,6 +37,7 @@ export const typographyStyles: Readonly<Record<
     lineHeight: '40px',
     letterSpacing: '-0.043em',
   },
+  // Title 2
   h3: {
     fontFamily: 'Inter',
     fontWeight: 'normal',
@@ -43,6 +46,7 @@ export const typographyStyles: Readonly<Record<
     lineHeight: '32px',
     letterSpacing: '-0.028em',
   },
+  // Title 3
   h4: {
     fontFamily: 'Inter',
     fontWeight: 'normal',
@@ -51,6 +55,7 @@ export const typographyStyles: Readonly<Record<
     lineHeight: '32px',
     letterSpacing: '-0.028em',
   },
+  // Headline
   h5: {
     fontFamily: 'Inter',
     fontWeight: 600,
@@ -59,6 +64,7 @@ export const typographyStyles: Readonly<Record<
     lineHeight: '24px',
     letterSpacing: '-0.028em',
   },
+  // Body
   body1: {
     fontFamily: 'Inter',
     fontWeight: 'normal',
@@ -67,6 +73,7 @@ export const typographyStyles: Readonly<Record<
     lineHeight: '24px',
     letterSpacing: '-0.006em',
   },
+  // Subhead
   subtitle1: {
     fontFamily: 'Inter',
     fontWeight: 'normal',
@@ -75,6 +82,7 @@ export const typographyStyles: Readonly<Record<
     lineHeight: '24px',
     letterSpacing: '-0.006em',
   },
+  // Footnote
   subtitle2: {
     fontFamily: 'Inter',
     fontWeight: 'normal',
@@ -82,6 +90,7 @@ export const typographyStyles: Readonly<Record<
     fontStyle: 'normal',
     lineHeight: '24px',
   },
+  // Caption 1
   body2: {
     fontFamily: 'Inter',
     fontWeight: 'normal',
@@ -89,6 +98,7 @@ export const typographyStyles: Readonly<Record<
     fontStyle: 'normal',
     lineHeight: '16px',
   },
+  // Caption 2
   h6: {
     fontFamily: 'Inter',
     fontWeight: 'normal',

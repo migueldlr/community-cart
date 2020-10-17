@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import Typography from './Typography';
-import Grid from '@material-ui/core/Grid';
 import banana from '../assets/banana.png';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';

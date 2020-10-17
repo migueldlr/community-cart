@@ -12,6 +12,10 @@ const useStyles = makeStyles(({ palette }: Theme) =>
       boxSizing: 'border-box',
       border: `1px solid ${palette.border.main}`,
       minWidth: 275,
+      padding: 16,
+    },
+    content: {
+      padding: 0,
     },
     bullet: {
       display: 'inline-block',
@@ -33,25 +37,11 @@ const Card: React.FC = () => {
 
   return (
     <MuiCard className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
+      <CardContent className={classes.content}>
+        <Typography variant="h3" gutterBottom>
           Word of the Day
         </Typography>
-        <Typography variant="h5">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
+        <Typography>Delivery from Publix</Typography>
       </CardContent>
       <CardActions>
         <Button>Learn More</Button>
