@@ -5,6 +5,7 @@ import Typography from '../components/Typography';
 import Card from '../components/Card';
 import Grid from '@material-ui/core/Grid';
 import logo from '../assets/logo.svg';
+import { Redirect, Link } from 'react-router-dom';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 // import { db } from '../firebase/index';
 
@@ -29,7 +30,9 @@ const SelectCart: React.FC<Props> = (props: Props) => {
             alignItems="center"
           >
             <Grid item>
-              <Card></Card>
+              <Link to="/order">
+                <Card></Card>
+              </Link>
             </Grid>
             <Grid item>
               <Card></Card>
