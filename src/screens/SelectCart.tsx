@@ -28,6 +28,7 @@ const SelectCart: React.FC<Props> = (props: Props) => {
             direction="row"
             justify="center"
             alignItems="center"
+            spacing={2}
           >
             <Grid item>
               <Link to="/order">
